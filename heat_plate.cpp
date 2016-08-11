@@ -4,8 +4,8 @@ using namespace std;
 
 /*------------------------------------------*/
 /*source code designed to solve the equation*/
-/*of heat transfer using FDM				        */
-/*Written by yongbok1102						        */
+/*of heat transfer using FDM		    */
+/*Written by yongbok1102		    */
 /*------------------------------------------*/
 
 int main()
