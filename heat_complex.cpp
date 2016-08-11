@@ -12,10 +12,10 @@ int min(int x, int y)
 
 /*----------------------------------------------*/
 /*source code for steady-state heat transfer	*/
-/*through the complex plate						*/
-/*Method for solving PDE: FDM					*/
+/*through the complex plate			*/
+/*Method for solving PDE: FDM			*/
 /*Method for solving linear system: Gauss-Seidel*/
-/*Written by yongbok1102						*/
+/*Written by yongbok1102			*/
 /*----------------------------------------------*/
 
 int main()
