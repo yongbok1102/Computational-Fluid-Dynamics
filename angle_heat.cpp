@@ -163,6 +163,7 @@ int main()
 			cout<<"iteration "<<itr<<'\t'<<"error "<<err(T,Told,np)<<endl;
 		}		
 	}
+	cout<<"iteration "<<itr<<'\t'<<"error "<<err(T,Told,np)<<endl;
 	out.close();
 	cout << "iteration complete\n";
 
