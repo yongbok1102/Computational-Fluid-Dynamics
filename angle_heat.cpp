@@ -92,6 +92,11 @@ int main()
 		T[i] = 0;
 	}
 
+	for (int i = 0; i < np; i++)
+	{
+		Told[i] = 1;
+	}
+
 	int itr=0;
 	ofstream out; out.open("log.txt");
 	//Iterative calculation
@@ -168,7 +173,6 @@ int main()
 	cout << "iteration complete\n";
 
 	//printing out the result
-	ofstream out;
 	out.open("angle_heat.vtk");
 	out << "# vtk DataFile Version 3.1\n";
 	out << "temperature distribution\n";
