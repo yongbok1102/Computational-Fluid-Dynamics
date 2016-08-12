@@ -10,6 +10,18 @@ int min(int x, int y)
 		return x;
 }
 
+//error
+double err(double X[], double Xold[], int N)
+{
+	double res=0;
+	for(int i=0;i<N;i++)
+	{
+		res+=pow(X[i]-Xold[i] , 2);
+	}
+
+	return sqrt(res/N);
+}
+
 /*----------------------------------------------------------------------------------------------------------*/
 /*source code for steady-state heat transfer through the 13cm by 13cm steel angle		 	    */
 /*Its thickness is 1.59cm and the boundary conditions are given below				            */
@@ -52,7 +64,8 @@ int main()
 	double* X; X = new double[np];
 	double* Y; Y = new double[np];
 	double* T; T = new double[np];
-
+	double* Told; Told=new double[np];
+	
 	int n = 0;
 	for (int j = 0; j <= ny1; j++)
 	{
@@ -79,10 +92,17 @@ int main()
 		T[i] = 0;
 	}
 
+	int itr=0;
+	ofstream out; out.open("log.txt");
 	//Iterative calculation
-	for (int itr = 1; itr <= 20000; itr++)
+	while(err(T,Told,np)>1e-008)
 	{
-		cout << "iteration " << itr << endl;
+		itr++;
+		
+		for(int i=0;i<np;i++)
+		{
+			Told[i]=T[i];
+		}
 
 
 		for (int i = 0; i <np; i++)
@@ -136,8 +156,14 @@ int main()
 					T[i] = 0.25*(T[i - 1] + T[i + 1] + T[i - nx2 - 1] + T[i + nx2 + 1]);
 			}
 		}
+		
+		if(itr%1000==0)
+		{
+			out<<itr<<'\t'<<err(T,Told,np)<<endl;			
+			cout<<"iteration "<<itr<<'\t'<<"error "<<err(T,Told,np)<<endl;
+		}		
 	}
-
+	out.close();
 	cout << "iteration complete\n";
 
 	//printing out the result
@@ -190,6 +216,7 @@ int main()
 	delete[] X;
 	delete[] Y;
 	delete[] T;
+	delete[] Told;
 	out.close();
 	return 0;
 }
