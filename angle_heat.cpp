@@ -11,23 +11,23 @@ int min(int x, int y)
 }
 
 /*----------------------------------------------------------------------------------------------------------*/
-/*source code for steady-state heat transfer through the 13cm by 13cm steel angle						   	*/
-/*Its thickness is 1.59cm and the boundary conditions are given below									   	*/
-/*   																										*/
-/*																											*/
+/*source code for steady-state heat transfer through the 13cm by 13cm steel angle		 	    */
+/*Its thickness is 1.59cm and the boundary conditions are given below				            */
+/*   													    */
+/*													    */
+/*		       		* *									    */
+/*				* *																						*/
 /*		       		* *																						*/
-/*					* *																						*/
+/*				* *																						*/
 /*		       		* *																						*/
-/*					* *																						*/
+/*	        600K 		* *																						*/
 /*		       		* *																						*/
-/*	        600K 	* *																						*/
-/*		       		* *																						*/
-/*					* *		Exposed to the surrounding air													*/
+/*				* *		Exposed to the surrounding air													*/
 /*		       		* *		at 300K																			*/
-/*					* *		(h = 45W/m2 K)																	*/
+/*				* *		(h = 45W/m2 K)																	*/
 /*		       		* *																						*/
-/*					* *	* * * * * * * * * * *																*/
-/*					* *	* * * * * * * * * * *																*/
+/*				* * * * * * * * * * * *	*															*/
+/*				* * * * * * * * * * * * *																*/
 /*								600K																		*/
 /*Heat conductivity of the steel is given 42.9W/m K															*/
 /*----------------------------------------------------------------------------------------------------------*/
