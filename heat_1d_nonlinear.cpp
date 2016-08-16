@@ -68,7 +68,7 @@ int main()
 			Told[i] = T[i];
 		}
 
-		//Gauss-Seidel method for liniearized system of equations
+		//Gauss-Seidel method for linearized system of equations
 		for (int j = 1; j <= 500000; j++)
 		{
 			for (int i = 0; i <= N; i++)
@@ -96,7 +96,7 @@ int main()
 	}
 	out.close();
 
-	//printing out the analysis result
+	//printing out the numerical result
 	out.open("res.dat");
 	for (int i = 0; i <= N; i++)
 	{
