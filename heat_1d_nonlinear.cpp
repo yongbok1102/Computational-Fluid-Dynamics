@@ -94,8 +94,6 @@ int main()
 		cout << "iteration: " << itr << " residual: " << res << endl;
 		out << itr << '\t' << res << endl;
 	}
-	out << itr << '\t' << res;
-
 	out.close();
 
 	//printing out the analysis result
