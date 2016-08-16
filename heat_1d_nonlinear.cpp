@@ -3,10 +3,10 @@
 #include <cmath>
 
 using namespace std;
-/*--------------------------------------------*/
-/*source code for nonlinear 1D heat conduction */
-/*written by yongbok1102					   */
-/*--------------------------------------------*/
+/*---------------------------------------------	*/
+/*source code for nonlinear 1D heat conduction 	*/
+/*written by yongbok1102			*/
+/*---------------------------------------------	*/
 
 //heat conductivity
 double k(double T)
